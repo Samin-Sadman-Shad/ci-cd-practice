@@ -16,3 +16,8 @@ jobs:
 
             - name: Read file
               run: cat README.md
+            
+            - name: Generate ASCII artwork
+              run: |
+                echo "run cowsay command"
+                cowsay -f dragon "I am a dragon" >> dragon.txt
