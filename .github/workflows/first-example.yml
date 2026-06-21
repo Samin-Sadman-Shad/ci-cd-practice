@@ -20,4 +20,4 @@ jobs:
             - name: Generate ASCII artwork
               run: |
                 echo "run cowsay command"
-                cowsay -f dragon "I am a dragon" >> dragon.txt
+#                cowsay -f dragon "I am a dragon" >> dragon.txt
