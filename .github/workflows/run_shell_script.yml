@@ -15,4 +15,4 @@ jobs:
             - name: Execute shell script
               run: |
                 chmod -x ascii-script.sh
-                ../shell_scripts/ascii-script.sh
+                ../../shell_scripts/ascii-script.sh
