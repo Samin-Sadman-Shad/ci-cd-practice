@@ -6,6 +6,12 @@ jobs:
     upload_artifacts:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout repository
+              uses: actions/checkout@v4
+
+            - name: create artifacts directory
+              run: mkdir -p ./artifacts
+
             - name: install cowsay program
               run: sudo apt-get install cowsay -y
 
@@ -28,7 +34,7 @@ jobs:
                 name: dragon-text-file
             
             - name: test file exist
-              run: find ./artifact -type f | grep -i "dragon"
+              run: find ./artifacts -type f | grep -i "dragon"
         
     deploy_job:
         runs-on: ubuntu-latest
