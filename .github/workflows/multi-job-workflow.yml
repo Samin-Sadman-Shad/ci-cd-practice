@@ -1,4 +1,4 @@
-name: Upload and Download artifacts
+name: Upload and Download artifacts with saving
 
 on: push
 
