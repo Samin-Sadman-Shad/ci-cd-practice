@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
 
             - name: create artifacts directory
               run: mkdir -p ./artifacts
@@ -32,6 +32,7 @@ jobs:
               uses: actions/download-artifact@v7
               with:
                 name: dragon-text-file
+                path: ./artifacts
             
             - name: test file exist
               run: find ./artifacts -type f | grep -i "dragon"
@@ -44,9 +45,10 @@ jobs:
               uses: actions/download-artifact@v7
               with:
                 name: dragon-text-file
+                path: ./artifacts
             
             - name: read file
-              run: cat dragon-text-file
+              run: cat ./artifacts/dragon.txt
 
             - name: deploy
               run: echo Deploying...
